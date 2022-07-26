@@ -8,9 +8,10 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xffEAF6F6),
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Colors.white,
+        backgroundColor:Color(0xffEAF6F6),
         actions: const [
           Padding(
             padding: EdgeInsets.only(right: 15),
@@ -23,14 +24,17 @@ class HomePage extends StatelessWidget {
         ],
       ),
       body: SafeArea(
+
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 10),
               child: Text(
-                "Wanto To Travel!",
+                "Want To Travel !",
                 style: TextStyle(
-                    fontSize: 50 - 2,
+                    fontSize: 60,
                     color: Colors.pink,
                     fontWeight: FontWeight.bold),
               ),

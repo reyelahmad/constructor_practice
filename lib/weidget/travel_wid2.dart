@@ -19,63 +19,62 @@ class _TrvlWidget2State extends State<TrvlWidget2> {
         return Stack(
           overflow: Overflow.visible,
           children: [
-            Center(
-              child: Padding(
-                padding: const EdgeInsets.only(right: 18),
-                child: Container(
-                  height: 222,
-                  width: 150,
+            Padding(
+              padding: const EdgeInsets.only(right: 18),
+              child: Container(
+                margin: EdgeInsets.only(top: 4),
+                height: 262,
+                width: 180,
 
-                  decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        offset: Offset(1,3),
-                          color: Colors.black87,
-                          blurRadius: 6,spreadRadius: 1,blurStyle: BlurStyle.normal)
-                    ],
-                    borderRadius: BorderRadius.circular(10),
-                    image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image: NetworkImage(
-                        travel.img,
-                      ),
+                decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      offset: Offset(1,4),
+                        color: Colors.black87,
+                        blurRadius: 6,spreadRadius: 1,blurStyle: BlurStyle.normal)
+                  ],
+                  borderRadius: BorderRadius.circular(10),
+                  image: DecorationImage(
+                    fit: BoxFit.cover,
+                    image: NetworkImage(
+                      travel.img,
                     ),
                   ),
-                  child: Stack(
+                ),
+                child: Stack(
 
-                    overflow: Overflow.visible,
-                    children: [
-                      Positioned(
-                          bottom: 15,
-                          left: 8,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Container(
-                                child: Text(
-                                  travel.name,
-                                  style: TextStyle(
-                                      fontSize: 16,
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold),
-                                ),
+                  overflow: Overflow.visible,
+                  children: [
+                    Positioned(
+                        bottom: 15,
+                        left: 8,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                              child: Text(
+                                travel.name,
+                                style: TextStyle(
+                                    fontSize: 26,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold),
                               ),
-                              Container(
-                                child: Text(
-                                  travel.addrs,
-                                  style: TextStyle(
-                                      fontSize: 11,
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.w500),
-                                ),
+                            ),
+                            Container(
+                              child: Text(
+                                travel.addrs,
+                                style: TextStyle(
+                                    fontSize: 16,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w500),
                               ),
-                            ],
-                          )),
+                            ),
+                          ],
+                        )),
 
 
-                    ],
-                  ),
+                  ],
                 ),
               ),
             ),
